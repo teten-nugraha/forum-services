@@ -1,10 +1,20 @@
-const me = (req, res) => {
+const UserService = require('../services/auth-service');
 
-    let userId = req.user;
+const me = async (req, res) => {
+
+    let userId = await req.user.id;
+
+    const existUser =  await UserService.getById(userId);
+    if(!existUser) {
+        return res.status(401).json({
+            success: true,
+            message: 'User not found'
+        })
+    }
 
     res.status(200).json({
         success: true,
-        data: userId
+        data: existUser
     });
 };
 
