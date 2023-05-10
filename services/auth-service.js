@@ -2,19 +2,6 @@ const bcrypt = require('bcryptjs/dist/bcrypt');
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 
-var ObjectId = require('mongodb').ObjectID;
-
-// find user by email
-async function getByEmail(email) {
-    let user = await User.findOne({ email });
-    return user;
-}
-
-async function getById(id) {
-    let user = await User.findById(id);
-    return user;
-}
-
 async function createUser(username, email, password) {
 
     let userExist = await User.findOne({ email });
@@ -64,4 +51,4 @@ async function signIn(email, password) {
 }
 
 
-module.exports = {createUser, getByEmail, signIn, getById};
+module.exports = {createUser, signIn};
