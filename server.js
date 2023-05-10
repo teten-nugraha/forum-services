@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const connectDB = require('./config/db.config');
-// const authRouter = require('./routes/auth-route');
+const authRouter = require('./routes/auth-route');
 // const profileRouter = require('./routes/profile-route');
 
 const app = express();
@@ -19,7 +19,7 @@ app.use(morgan('tiny'));
 app.get('/', (req, res) => {
     res.status(200).json("🚀 API is running");
 });
-// app.use('/', authRouter);
+app.use('/api/v1/auth', authRouter);
 // app.use('/', profileRouter);
 
 // LAUNCH
