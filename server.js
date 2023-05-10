@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const connectDB = require('./config/db.config');
 const authRouter = require('./routes/auth-route');
-// const profileRouter = require('./routes/profile-route');
+const profileRouter = require('./routes/profile-route');
 
 const app = express();
 dotenv.config();
@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
     res.status(200).json("🚀 API is running");
 });
 app.use('/api/v1/auth', authRouter);
-// app.use('/', profileRouter);
+app.use('/api/v1/profile', profileRouter);
 
 // LAUNCH
 const port = process.env.PORT;
