@@ -10,4 +10,9 @@ async function getById(id) {
     return user;
 }
 
-module.exports = {getByEmail, getById};
+async function getUsername(id) {
+    let user = await User.findById(id);
+    return user.username;
+}
+
+module.exports = {getByEmail, getById, getUsername};
