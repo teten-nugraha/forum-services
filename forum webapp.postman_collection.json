@@ -102,6 +102,19 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "threads",
+			"item": [
+				{
+					"name": "create thread",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
