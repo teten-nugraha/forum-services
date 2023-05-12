@@ -37,7 +37,136 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "500 user already exist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\" : \"teten\",\n    \"email\" : \"teten@mail.com\",\n    \"password\" : \"1234567\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/api/v1/auth/signUp",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"signUp"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f-QYdGmyy6MZUcFJn6mZR2Pk4IV84\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 01:50:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"User sudah terdaftar\"\n}"
+						},
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\" : \"teten22\",\n    \"email\" : \"teten2@mail.com\",\n    \"password\" : \"1234567\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/api/v1/auth/signUp",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"signUp"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "187"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bb-laWjdAEMJYpDfrk91jbtKwcLRRw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 01:50:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"645d9b7ed16c4a0f9515652a\",\n        \"username\": \"teten22\",\n        \"email\": \"teten2@mail.com\",\n        \"password\": \"$2a$10$mfhNys2wtgFuotUOIVn6IelQJoDzruOiqSYimqu45tsEDU4qza7nC\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "login",
@@ -67,7 +196,136 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\" : \"teten@mail.com\",\n    \"password\" : \"1234567\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/api/v1/auth/Signin",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"Signin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "209"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d1-cjF8/X1LVIY5FVF0wCHNQ3PdmVY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 01:46:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo\"\n}"
+						},
+						{
+							"name": "500 user tidak ada",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\" : \"tete222n@mail.com\",\n    \"password\" : \"1234567\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/api/v1/auth/Signin",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"Signin"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-Ad0fqrtzbudfVFSoNH+MUC/j6gg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 01:51:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"User tidak ada\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -99,7 +357,130 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "401 unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4MzcwMjExMywiZXhwIjoxNjgzNzM4MTEzfQ.ycLTP7WgkHfngdacnCvN75WbjFbIl7hUwZ2raloej6c",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8083/api/v1/profile/me",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"profile",
+										"me"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-H7BIp9unDWDG6Q9pD854L1YO5lo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 01:51:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Token not valid\"\n}"
+						},
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8083/api/v1/profile/me",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"profile",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "184"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b8-+PU21Crdj4xnX5J/VdXvcQSpK9s\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 01:52:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"645b4143cd7b9930cf974fa9\",\n        \"username\": \"teten\",\n        \"email\": \"teten@mail.com\",\n        \"password\": \"$2a$10$O0XSIytkBIs2qETE6wUFNeTufXIh4CF2uxaaxDIH8tQe9.qLf61oG\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
 				}
 			]
 		},
@@ -109,10 +490,492 @@
 				{
 					"name": "create thread",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"Test\",\n    \"description\" : \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/api/v1/threads",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"v1",
+								"threads"
+							]
+						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"Test 1\",\n    \"description\" : \"test2 \"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/api/v1/threads",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"threads"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ac-jaCpD/QgZq5xxq0OPk+EFnmKk6s\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 01:50:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"likes\": 0,\n        \"_id\": \"645d9b4ad16c4a0f95156523\",\n        \"title\": \"Test 1\",\n        \"description\": \"test2 \",\n        \"maker\": \"teten\",\n        \"createDate\": \"2023-05-12T01:50:02.448Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "500 - thread already exist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"Test 1\",\n    \"description\" : \"test2 \"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/api/v1/threads",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"threads"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-KZfq6zcS4jrj0pkZciA2ITaCeeo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 01:50:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Thread sudah ada\"\n}"
+						}
+					]
+				},
+				{
+					"name": "comment thread",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"Test\",\n    \"description\" : \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/api/v1/threads",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"v1",
+								"threads"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"comment\" : \"emg dlu kerja sampe jam berapa ?\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/api/v1/threads/comments/645d9a7901bf520dbfe9e6ac",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"threads",
+										"comments",
+										"645d9a7901bf520dbfe9e6ac"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "211"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d3-W57OrM8N23yL06fRXlZz4GPstQ0\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 02:08:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"645d9f954bfc4117d27936eb\",\n        \"threadId\": \"645d9a7901bf520dbfe9e6ac\",\n        \"commentator\": \"teten\",\n        \"comment\": \"emg dlu kerja sampe jam berapa ?\",\n        \"createDate\": \"2023-05-12T02:08:21.097Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "500 thread not exist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"comment\" : \"emg dlu kerja sampe jam berapa ?\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/api/v1/threads/comments/645d9a7901bf520dbfe9e6ac2",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"threads",
+										"comments",
+										"645d9a7901bf520dbfe9e6ac2"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8d-OfypKKqcHDwwwNUo8L3n0rQmKKY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 02:09:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Cast to ObjectId failed for value \\\"645d9a7901bf520dbfe9e6ac2\\\" (type string) at path \\\"_id\\\" for model \\\"Thread\\\"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "like thread",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"Test\",\n    \"description\" : \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/api/v1/threads",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"v1",
+								"threads"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8083/api/v1/threads/like/645d9a7901bf520dbfe9e6ac",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"threads",
+										"like",
+										"645d9a7901bf520dbfe9e6ac"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "168"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a8-qfnRzf1fV8eT0AIiQJA1DcPcECM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 01:49:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"likes\": 4,\n        \"_id\": \"645d9a7901bf520dbfe9e6ac\",\n        \"title\": \"Test\",\n        \"description\": \"test\",\n        \"maker\": \"teten\",\n        \"createDate\": \"2023-05-12T01:46:33.570Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
 				}
 			]
 		}
