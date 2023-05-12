@@ -22,4 +22,24 @@ const createThread = async (req, res) => {
     }
 };
 
-module.exports = {createThread};
+const likeThread = async (req, res) => {
+    try {
+
+        const threadId = await req.params.id;
+
+        let thread = await ThreadService.likeThread(threadId);
+        
+        res.status(200).json({
+            success: true,
+            data: thread
+        });
+
+    }catch(err){
+        res.status(500).json({
+            error: true,
+            message: err.message
+        })
+    }
+};
+
+module.exports = {createThread, likeThread};

@@ -21,4 +21,16 @@ async function createThread(title, description, userId) {
     return newThread.populate("user");
 };
 
-module.exports = {createThread};
+async function likeThread(threadId) {
+    let existThread = await Thread.findById(threadId)
+    if(!existThread) {
+        throw new Error("Thread tidak ada")
+    }
+
+    existThread.likes = existThread.likes + 1;
+    existThread.save();
+    return existThread;
+
+}
+
+module.exports = {createThread, likeThread};
