@@ -1,4 +1,5 @@
 const Thread = require('../models/thread');
+const Comment = require('../models/comment');
 const UserService = require('../services/user-service');
 
 async function createThread(title, description, userId) {
@@ -33,4 +34,25 @@ async function likeThread(threadId) {
 
 }
 
-module.exports = {createThread, likeThread};
+async function commentThread(threadId, userId, comment) {
+
+    const commentator =  await UserService.getUsername(userId);
+
+    let existThread = await Thread.findById(threadId)
+    if(!existThread) {
+        throw new Error("Thread tidak ada")
+    }
+
+    let newComment = new Comment({
+        threadId,
+        commentator,
+        comment
+    });
+
+    await newComment.save();
+
+    return newComment;
+
+}
+
+module.exports = {createThread, likeThread, commentThread};

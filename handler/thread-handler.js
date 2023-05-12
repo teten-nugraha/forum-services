@@ -1,3 +1,4 @@
+const comment = require('../models/comment');
 const ThreadService = require('../services/thread-service');
 
 const createThread = async (req, res) => {
@@ -42,4 +43,28 @@ const likeThread = async (req, res) => {
     }
 };
 
-module.exports = {createThread, likeThread};
+const commentThread = async (req, res) => {
+    try {
+        
+        const { comment } =  req.body;
+        const threadId = await req.params.id;
+        let userId = await req.user.id;
+
+        const newComment = await ThreadService.commentThread(threadId, userId, comment);
+        
+        res.status(200).json({
+            success: true,
+            data: newComment
+        });
+
+
+
+    }catch(err){
+        res.status(500).json({
+            error: true,
+            message: err.message
+        })
+    }
+}
+
+module.exports = {createThread, likeThread, commentThread};
