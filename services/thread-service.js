@@ -55,4 +55,11 @@ async function commentThread(threadId, userId, comment) {
 
 }
 
-module.exports = {createThread, likeThread, commentThread};
+async function getTopThread() {
+    var threadsMap = {};
+    let minimalTopThreadLike = 5;
+    let topThreads = await Thread.find({ 'likes': {$gt:minimalTopThreadLike}}).sort({createDate: 'desc'});
+    return topThreads;
+}
+
+module.exports = {createThread, likeThread, commentThread, getTopThread};
