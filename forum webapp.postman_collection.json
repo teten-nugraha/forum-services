@@ -679,7 +679,7 @@
 				{
 					"name": "top threads",
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -688,21 +688,12 @@
 							},
 							{
 								"key": "x-auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NDExNjMyNywiZXhwIjoxNjg0MTUyMzI3fQ.bEzq5d038OouexcKioDHchPDkdhjOAD4IvmX6pmYT2M",
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"title\" : \"Test 1\",\n    \"description\" : \"test2 \"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "localhost:8083/api/v1/threads",
+							"raw": "localhost:8083/api/v1/threads/tops",
 							"host": [
 								"localhost"
 							],
@@ -710,7 +701,199 @@
 							"path": [
 								"api",
 								"v1",
-								"threads"
+								"threads",
+								"tops"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"Test 1\",\n    \"description\" : \"test2 \"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/api/v1/threads",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"threads"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ac-jaCpD/QgZq5xxq0OPk+EFnmKk6s\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 01:50:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"likes\": 0,\n        \"_id\": \"645d9b4ad16c4a0f95156523\",\n        \"title\": \"Test 1\",\n        \"description\": \"test2 \",\n        \"maker\": \"teten\",\n        \"createDate\": \"2023-05-12T01:50:02.448Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "500 - thread already exist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"Test 1\",\n    \"description\" : \"test2 \"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/api/v1/threads",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"threads"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-KZfq6zcS4jrj0pkZciA2ITaCeeo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 01:50:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Thread sudah ada\"\n}"
+						}
+					]
+				},
+				{
+					"name": "threads paginations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NDIwMjEzNiwiZXhwIjoxNjg0MjM4MTM2fQ.awAENaU_X3e41Z627xjP0Tl5BL-o2_ruPpX1ltS6HMU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8083/api/v1/threads/pagination?page=3&limit=5",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"v1",
+								"threads",
+								"pagination"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
 							]
 						}
 					},

@@ -55,6 +55,32 @@ async function commentThread(threadId, userId, comment) {
 
 }
 
+async function getThreads(req) {
+    try {
+
+        // We destructure the req.query object to get the page and limit variables from url 
+        const { page = 1, limit = 5 } = req.query;
+
+        const threads = await Thread.find({ })
+                    .limit(limit * 1)
+                    .skip((page-1) * limit)
+                    .sort({ createDate: -1 });
+        console.log(threads);
+        
+        const count = await Thread.countDocuments();
+
+        const response = {
+            threads,
+            totalPages: Math.ceil(count / limit),
+            currentPage: page,
+        }
+
+        return response;
+    }catch (err) {
+        throw new Error("Error pada saat mengambil data threads");
+    }
+}
+
 async function getTopThread() {
     var threadsMap = {};
     let minimalTopThreadLike = 5;
@@ -62,4 +88,4 @@ async function getTopThread() {
     return topThreads;
 }
 
-module.exports = {createThread, likeThread, commentThread, getTopThread};
+module.exports = {createThread, likeThread, commentThread, getTopThread, getThreads};
