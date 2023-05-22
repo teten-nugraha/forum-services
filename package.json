@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon cmd/server.js",
-    "start": "node cmd/server.js"
+    "start": "node cmd/server.js",
+    "lint:fix" : "eslint --fix ./*.js"
   },
   "keywords": [],
   "author": "Teten Nugraha",
@@ -22,6 +23,11 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
     "nodemon": "^2.0.15"
   }
 }
