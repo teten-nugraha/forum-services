@@ -82,10 +82,17 @@ async function getThreads(req) {
 }
 
 async function getTopThread() {
-    var threadsMap = {};
     let minimalTopThreadLike = 5;
     let topThreads = await Thread.find({ 'likes': {$gt:minimalTopThreadLike}}).sort({createDate: 'desc'});
     return topThreads;
 }
 
-module.exports = {createThread, likeThread, commentThread, getTopThread, getThreads};
+async function getComments(threadId) {
+
+    const comments = await Comment.find({ threadId: threadId }).sort({createDate: 'desc'});
+
+    return comments;
+
+}
+
+module.exports = {createThread, likeThread, commentThread, getTopThread, getThreads, getComments};

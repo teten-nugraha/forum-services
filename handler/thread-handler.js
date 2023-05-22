@@ -107,4 +107,22 @@ const threads = async (req, res) => {
     }
 }
 
-module.exports = {createThread, likeThread, commentThread, topThread, threads};
+const getComments = async (req, res) => {
+    try {
+        const threadId = await req.params.id;
+
+        const comments = await ThreadService.getComments(threadId);
+
+        res.status(200).json({
+            success: true,
+            data: comments
+        });
+    }catch(err){
+        res.status(500).json({
+            error: true,
+            message: err.message
+        })
+    }
+}
+
+module.exports = {createThread, likeThread, commentThread, topThread, threads, getComments};
