@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "dev": "nodemon cmd/server.js",
+    "start" : "node cmd/server.js"
   },
   "keywords": [],
   "author": "Teten Nugraha",
