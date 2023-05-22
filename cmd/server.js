@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const connectDB = require('../config/db.config');
+const cors = require('cors');
 
 const authRouter = require('../routes/auth-route');
 const profileRouter = require('../routes/profile-route');
@@ -16,6 +17,11 @@ connectDB();
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
 
+// enable CORS
+const FE_URL = process.env.FE_URL;
+app.use(cors({
+    origin: [FE_URL]
+}));
 
 // ROUTES
 app.get('/', (req, res) => {

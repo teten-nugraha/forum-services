@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon cmd/server.js",
-    "start" : "node cmd/server.js"
+    "start": "node cmd/server.js"
   },
   "keywords": [],
   "author": "Teten Nugraha",
