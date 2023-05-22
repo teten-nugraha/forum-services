@@ -6,7 +6,7 @@ const signUp = async(req, res) => {
 
         const savedUser = await UserService.createUser(username, email, password);
 
-        res.status(200).json({
+        res.status(201).json({
             success: true,
             data: savedUser
         });

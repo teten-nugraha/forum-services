@@ -9,7 +9,7 @@ const createThread = async (req, res) => {
 
         const threadSaved = await ThreadService.createThread(title, description, userId);
         
-        res.status(200).json({
+        res.status(201).json({
             success: true,
             data: threadSaved
         });
