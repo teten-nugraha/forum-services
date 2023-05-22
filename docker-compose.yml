@@ -21,9 +21,23 @@ services:
     ports:
       - $PORT:$PORT
     environment:
-      - MONGO_URL=mongodb://mongodb:27017/forum-db
+      - MONGO_URL=mongodb://$MONGODB_USER:$MONGODB_PASSWORD@mongodb:27017/forum-db?authSource=admin
     stdin_open: true
     tty: true
+  mongo-express:
+    image: mongo-express
+    container_name: mexpress
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=$MONGODB_USER
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=$MONGODB_PASSWORD
+      - ME_CONFIG_MONGODB_URL=mongodb://$MONGODB_USER:$MONGODB_PASSWORD@mongodb:27017/?authSource=admin
+      - ME_CONFIG_BASICAUTH_USERNAME=$ME_CONFIG_BASICAUTH_USERNAME
+      - ME_CONFIG_BASICAUTH_PASSWORD=$ME_CONFIG_BASICAUTH_PASSWORD
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
 
 volumes:
   db:
