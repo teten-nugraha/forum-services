@@ -19,13 +19,15 @@ app.use(morgan('tiny'))
 
 // enable CORS
 const FE_URL = process.env.FE_URL
-app.use(cors({
-  origin: [FE_URL]
-}))
+app.use(
+    cors({
+        origin: [FE_URL],
+    })
+)
 
 // ROUTES
 app.get('/', (req, res) => {
-  res.status(200).json('🚀 API is running')
+    res.status(200).json('🚀 API is running')
 })
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/profile', profileRouter)
@@ -34,5 +36,5 @@ app.use('/api/v1/threads', threadRouter)
 // LAUNCH
 const port = process.env.PORT
 app.listen(port, () => {
-  console.log(`🚀 Server ready at http://0.0.0.0:${port}`)
+    console.log(`🚀 Server ready at http://0.0.0.0:${port}`)
 })
