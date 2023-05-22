@@ -21,7 +21,7 @@ services:
     ports:
       - $PORT:$PORT
     environment:
-      - MONGO_URL=$MONGO_URL
+      - MONGO_URL=mongodb://mongodb:27017/forum-db
     stdin_open: true
     tty: true
 

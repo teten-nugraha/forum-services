@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../models/user');
 
 async function getByEmail(email) {
     let user = await User.findOne({ email });
