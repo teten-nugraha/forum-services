@@ -1244,6 +1244,204 @@
 					]
 				},
 				{
+					"name": "get comments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NDcyMDQyMSwiZXhwIjoxNjg0NzU2NDIxfQ.NJrkyryW1NveXkRCiBq5pNIEe4wWaPRIPOMpvOLMiWU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comment\" : \"emg dlu kerja sampe jam berapa ?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8083/api/v1/threads/comments/645d9a7901bf520dbfe9e6ac2",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"v1",
+								"threads",
+								"comments",
+								"645d9a7901bf520dbfe9e6ac2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"comment\" : \"emg dlu kerja sampe jam berapa ?\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/api/v1/threads/comments/645d9a7901bf520dbfe9e6ac2",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"threads",
+										"comments",
+										"645d9a7901bf520dbfe9e6ac2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "211"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d3-W57OrM8N23yL06fRXlZz4GPstQ0\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 02:08:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"645d9f954bfc4117d27936eb\",\n        \"threadId\": \"645d9a7901bf520dbfe9e6ac\",\n        \"commentator\": \"teten\",\n        \"comment\": \"emg dlu kerja sampe jam berapa ?\",\n        \"createDate\": \"2023-05-12T02:08:21.097Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "500 thread not exist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"comment\" : \"emg dlu kerja sampe jam berapa ?\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8083/api/v1/threads/comments/645d9a7901bf520dbfe9e6ac2",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"threads",
+										"comments",
+										"645d9a7901bf520dbfe9e6ac2"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8d-OfypKKqcHDwwwNUo8L3n0rQmKKY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 May 2023 02:09:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Cast to ObjectId failed for value \\\"645d9a7901bf520dbfe9e6ac2\\\" (type string) at path \\\"_id\\\" for model \\\"Thread\\\"\"\n}"
+						}
+					]
+				},
+				{
 					"name": "like thread",
 					"request": {
 						"method": "POST",
