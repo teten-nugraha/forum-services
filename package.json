@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon cmd/server.js",
     "start": "node cmd/server.js",
-    "lint:fix" : "eslint --fix ./*.js"
+    "lint:fix": "eslint --fix .",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint:check": "eslint ."
   },
   "keywords": [],
   "author": "Teten Nugraha",
@@ -24,6 +27,7 @@
   },
   "devDependencies": {
     "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.7.0",
