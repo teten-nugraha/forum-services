@@ -1,5 +1,12 @@
 const express = require('express')
-const { createThread, likeThread, commentThread, topThread, threads, getComments } = require('../handler/thread-handler')
+const {
+    createThread,
+    likeThread,
+    commentThread,
+    topThread,
+    threads,
+    getComments,
+} = require('../handler/thread-handler')
 const authMiddleware = require('../middlewares/auth-middleware')
 
 const router = express.Router()
