@@ -134,6 +134,22 @@ const getThreadDetail = async (req, res) => {
     }
 }
 
+const allthreads = async (req, res) => {
+    try {
+        const threads = await ThreadService.getAllThreads()
+
+        res.status(200).json({
+            success: true,
+            data: threads,
+        })
+    } catch (err) {
+        res.status(500).json({
+            error: true,
+            message: err.message,
+        })
+    }
+}
+
 module.exports = {
     createThread,
     likeThread,
@@ -142,4 +158,5 @@ module.exports = {
     threads,
     getComments,
     getThreadDetail,
+    allthreads,
 }

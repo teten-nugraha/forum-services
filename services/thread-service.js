@@ -101,6 +101,14 @@ async function getThreadDetail(threadId) {
     return existThread
 }
 
+async function getAllThreads() {
+    const threads = await Thread.find({}).sort({
+        createDate: 'desc',
+    })
+
+    return threads
+}
+
 module.exports = {
     createThread,
     likeThread,
@@ -109,4 +117,5 @@ module.exports = {
     getThreads,
     getComments,
     getThreadDetail,
+    getAllThreads,
 }
