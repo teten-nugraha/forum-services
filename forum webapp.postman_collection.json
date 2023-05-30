@@ -1541,6 +1541,179 @@
 							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"likes\": 4,\n        \"_id\": \"645d9a7901bf520dbfe9e6ac\",\n        \"title\": \"Test\",\n        \"description\": \"test\",\n        \"maker\": \"teten\",\n        \"createDate\": \"2023-05-12T01:46:33.570Z\",\n        \"__v\": 0\n    }\n}"
 						}
 					]
+				},
+				{
+					"name": "thread detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NTQxNTc4NiwiZXhwIjoxNjg1NDUxNzg2fQ.9FbP3TpR2Y1foUWembzzN28HZm3_dI4g7c494he7AlY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8083/api/v1/threads/645d9a7901bf520dbfe9e6ac1",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"v1",
+								"threads",
+								"645d9a7901bf520dbfe9e6ac1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NTQxNTc4NiwiZXhwIjoxNjg1NDUxNzg2fQ.9FbP3TpR2Y1foUWembzzN28HZm3_dI4g7c494he7AlY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8083/api/v1/threads/645d9a7901bf520dbfe9e6ac",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"threads",
+										"645d9a7901bf520dbfe9e6ac"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "168"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a8-PnlbnxG43u9wTMqOnFMw9d5Jy7I\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 May 2023 03:03:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"likes\": 6,\n        \"_id\": \"645d9a7901bf520dbfe9e6ac\",\n        \"title\": \"Test\",\n        \"description\": \"test\",\n        \"maker\": \"teten\",\n        \"createDate\": \"2023-05-12T01:46:33.570Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "500",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NTQxNTc4NiwiZXhwIjoxNjg1NDUxNzg2fQ.9FbP3TpR2Y1foUWembzzN28HZm3_dI4g7c494he7AlY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8083/api/v1/threads/645d9a7901bf520dbfe9e6ac1",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"threads",
+										"645d9a7901bf520dbfe9e6ac1"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8d-1gfylrHLASLsmDzoYtlcVteo29w\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 May 2023 03:04:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Cast to ObjectId failed for value \\\"645d9a7901bf520dbfe9e6ac1\\\" (type string) at path \\\"_id\\\" for model \\\"Thread\\\"\"\n}"
+						}
+					]
 				}
 			]
 		}

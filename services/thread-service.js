@@ -92,6 +92,15 @@ async function getComments(threadId) {
     return comments
 }
 
+async function getThreadDetail(threadId) {
+    const existThread = await Thread.findById(threadId)
+    if (!existThread) {
+        throw new Error('Thread tidak ada')
+    }
+
+    return existThread
+}
+
 module.exports = {
     createThread,
     likeThread,
@@ -99,4 +108,5 @@ module.exports = {
     getTopThread,
     getThreads,
     getComments,
+    getThreadDetail,
 }

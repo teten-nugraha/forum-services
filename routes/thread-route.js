@@ -6,12 +6,14 @@ const {
     topThread,
     threads,
     getComments,
+    getThreadDetail,
 } = require('../handler/thread-handler')
 const authMiddleware = require('../middlewares/auth-middleware')
 
 const router = express.Router()
 
 router.post('/', authMiddleware, createThread)
+router.get('/:id', authMiddleware, getThreadDetail)
 router.post('/likes/:id', authMiddleware, likeThread)
 router.post('/comments/:id', authMiddleware, commentThread)
 router.get('/tops', authMiddleware, topThread)
