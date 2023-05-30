@@ -83,6 +83,7 @@ const topThread = async (req, res) => {
 
 const threads = async (req, res) => {
     try {
+        console.log(req)
         const threads = await ThreadService.getThreads(req)
 
         res.status(200).json({
