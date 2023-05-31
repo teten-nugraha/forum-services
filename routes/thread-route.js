@@ -16,10 +16,10 @@ const router = express.Router()
 router.get('/all', authMiddleware, allthreads)
 router.get('/', authMiddleware, threads)
 router.post('/', authMiddleware, createThread)
+router.get('/tops', authMiddleware, topThread)
 router.get('/:id', authMiddleware, getThreadDetail)
 router.post('/likes/:id', authMiddleware, likeThread)
 router.post('/comments/:id', authMiddleware, commentThread)
-router.get('/tops', authMiddleware, topThread)
 router.get('/comments/:id', authMiddleware, getComments)
 
 module.exports = router

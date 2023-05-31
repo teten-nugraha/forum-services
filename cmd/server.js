@@ -29,9 +29,9 @@ app.use(
 app.get('/', (req, res) => {
     res.status(200).json('🚀 API is running')
 })
-app.use('/api/v1/auth', authRouter)
-app.use('/api/v1/profile', profileRouter)
-app.use('/api/v1/threads', threadRouter)
+app.use('/api/auth/', authRouter)
+app.use('/api/profile/', profileRouter)
+app.use('/api/threads/', threadRouter)
 
 // LAUNCH
 const port = process.env.PORT

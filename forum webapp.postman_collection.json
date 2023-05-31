@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\" : \"teten22\",\n    \"email\" : \"teten2@mail.com\",\n    \"password\" : \"1234567\"\n}",
+							"raw": "{\n    \"username\" : \"teten222\",\n    \"email\" : \"teten222@mail.com\",\n    \"password\" : \"1234567\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,14 +24,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8083/api/v1/auth/signUp",
+							"raw": "localhost:8083/api/auth/signUp",
 							"host": [
 								"localhost"
 							],
 							"port": "8083",
 							"path": [
 								"api",
-								"v1",
 								"auth",
 								"signUp"
 							]
@@ -499,13 +498,13 @@
 							},
 							{
 								"key": "x-auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NTQ5NzI4NywiZXhwIjoxNjg1NTMzMjg3fQ.54OVvzt7mvQiPmeaAdaKQJUQbHpQKgK53y-qetzn1rM",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\" : \"Test 1\",\n    \"description\" : \"test2 \"\n}",
+							"raw": "{\n    \"title\" : \"Test 12\",\n    \"description\" : \"test2 \"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -513,14 +512,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8083/api/v1/threads",
+							"raw": "localhost:8083/api/threads",
 							"host": [
 								"localhost"
 							],
 							"port": "8083",
 							"path": [
 								"api",
-								"v1",
 								"threads"
 							]
 						}
@@ -869,21 +867,19 @@
 							},
 							{
 								"key": "x-auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NDIwMjEzNiwiZXhwIjoxNjg0MjM4MTM2fQ.awAENaU_X3e41Z627xjP0Tl5BL-o2_ruPpX1ltS6HMU",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NTQ5NzI4NywiZXhwIjoxNjg1NTMzMjg3fQ.54OVvzt7mvQiPmeaAdaKQJUQbHpQKgK53y-qetzn1rM",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "localhost:8083/api/v1/threads/pagination?page=3&limit=5",
+							"raw": "localhost:8083/api/threads?page=3&limit=5",
 							"host": [
 								"localhost"
 							],
 							"port": "8083",
 							"path": [
 								"api",
-								"v1",
-								"threads",
-								"pagination"
+								"threads"
 							],
 							"query": [
 								{
@@ -1060,7 +1056,7 @@
 							},
 							{
 								"key": "x-auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4Mzg1NTk4MiwiZXhwIjoxNjgzODkxOTgyfQ.chcm9vVLg_ezVkIBKLVC7UmXKOXCf37_cAqK9cp8IUo",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NTQ5NzI4NywiZXhwIjoxNjg1NTMzMjg3fQ.54OVvzt7mvQiPmeaAdaKQJUQbHpQKgK53y-qetzn1rM",
 								"type": "text"
 							}
 						],
@@ -1074,17 +1070,16 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8083/api/v1/threads/comments/645d9a7901bf520dbfe9e6ac2",
+							"raw": "localhost:8083/api/threads/comments/6475bb8dae0d6b1b74334508",
 							"host": [
 								"localhost"
 							],
 							"port": "8083",
 							"path": [
 								"api",
-								"v1",
 								"threads",
 								"comments",
-								"645d9a7901bf520dbfe9e6ac2"
+								"6475bb8dae0d6b1b74334508"
 							]
 						}
 					},
@@ -1258,7 +1253,7 @@
 							},
 							{
 								"key": "x-auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NDcyMDQyMSwiZXhwIjoxNjg0NzU2NDIxfQ.NJrkyryW1NveXkRCiBq5pNIEe4wWaPRIPOMpvOLMiWU",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NTQ5NzI4NywiZXhwIjoxNjg1NTMzMjg3fQ.54OVvzt7mvQiPmeaAdaKQJUQbHpQKgK53y-qetzn1rM",
 								"type": "text"
 							}
 						],
@@ -1272,17 +1267,16 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8083/api/v1/threads/comments/645d9a7901bf520dbfe9e6ac2",
+							"raw": "localhost:8083/api/threads/comments/6475bb8dae0d6b1b74334508",
 							"host": [
 								"localhost"
 							],
 							"port": "8083",
 							"path": [
 								"api",
-								"v1",
 								"threads",
 								"comments",
-								"645d9a7901bf520dbfe9e6ac2"
+								"6475bb8dae0d6b1b74334508"
 							]
 						}
 					},
@@ -1554,21 +1548,192 @@
 							},
 							{
 								"key": "x-auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NTQxNTc4NiwiZXhwIjoxNjg1NDUxNzg2fQ.9FbP3TpR2Y1foUWembzzN28HZm3_dI4g7c494he7AlY",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NTQ5NzI4NywiZXhwIjoxNjg1NTMzMjg3fQ.54OVvzt7mvQiPmeaAdaKQJUQbHpQKgK53y-qetzn1rM",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "localhost:8083/api/v1/threads/645d9a7901bf520dbfe9e6ac1",
+							"raw": "localhost:8083/api/threads/6475bb8dae0d6b1b74334508",
 							"host": [
 								"localhost"
 							],
 							"port": "8083",
 							"path": [
 								"api",
-								"v1",
 								"threads",
-								"645d9a7901bf520dbfe9e6ac1"
+								"6475bb8dae0d6b1b74334508"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NTQxNTc4NiwiZXhwIjoxNjg1NDUxNzg2fQ.9FbP3TpR2Y1foUWembzzN28HZm3_dI4g7c494he7AlY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8083/api/v1/threads/645d9a7901bf520dbfe9e6ac",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"threads",
+										"645d9a7901bf520dbfe9e6ac"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "168"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a8-PnlbnxG43u9wTMqOnFMw9d5Jy7I\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 May 2023 03:03:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"likes\": 6,\n        \"_id\": \"645d9a7901bf520dbfe9e6ac\",\n        \"title\": \"Test\",\n        \"description\": \"test\",\n        \"maker\": \"teten\",\n        \"createDate\": \"2023-05-12T01:46:33.570Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "500",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NTQxNTc4NiwiZXhwIjoxNjg1NDUxNzg2fQ.9FbP3TpR2Y1foUWembzzN28HZm3_dI4g7c494he7AlY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8083/api/v1/threads/645d9a7901bf520dbfe9e6ac1",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"v1",
+										"threads",
+										"645d9a7901bf520dbfe9e6ac1"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8d-1gfylrHLASLsmDzoYtlcVteo29w\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 May 2023 03:04:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Cast to ObjectId failed for value \\\"645d9a7901bf520dbfe9e6ac1\\\" (type string) at path \\\"_id\\\" for model \\\"Thread\\\"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get all threads",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YjQxNDNjZDdiOTkzMGNmOTc0ZmE5In0sImlhdCI6MTY4NTQ5NzI4NywiZXhwIjoxNjg1NTMzMjg3fQ.54OVvzt7mvQiPmeaAdaKQJUQbHpQKgK53y-qetzn1rM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8083/api/threads/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"api",
+								"threads",
+								"all"
 							]
 						}
 					},
